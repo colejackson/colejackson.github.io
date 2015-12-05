@@ -1,2 +1,4 @@
 name: Coleman Jackson
 markdown: kramdown
+
+permalink: /blog/:year/:month/:day/:title
