@@ -7,33 +7,33 @@ title: Project Blog's
 
 <ul>
 	<li>
-		<h3>Language Learning Center</h3>
+		<h2>Language Learning Center</h2>
 		<ul class="posts">
-		{% for post in site.posts limit:5 %}
-			{% if post.categories contains 'LLC' %}
-				<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  		{% endif %}
-	  	{% endfor %}
+			{% for post in site.posts limit:5 %}
+				{% if post.categories contains 'LLC' %}
+					<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+		  		{% endif %}
+		  	{% endfor %}
 		</ul>
 	</li>
 	<li>
-		<h3>OU SACM Website</h3>
+		<h2>OU SACM Website</h2>
 		<ul class="posts">
-		{% for post in site.posts limit:5 %}
-			{% if post.categories contains 'SACM' %}
-				<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  		{% endif %}
-	  	{% endfor %}
+			{% for post in site.posts limit:5 %}
+				{% if post.categories contains 'SACM' %}
+					<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+		  		{% endif %}
+		  	{% endfor %}
 		</ul>
 	</li>
 	<li>
-		<h3>Language Learning Center</h3>
+		<h2>Class Projects</h2>
 		<ul class="posts">
-		{% for post in site.posts limit:5 %}
-			{% if post.categories contains 'LLC' %}
-				<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  		{% endif %}
-	  	{% endfor %}
+			{% for post in site.posts limit:5 %}
+				{% if post.categories contains 'OU' %}
+					<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+		  		{% endif %}
+		  	{% endfor %}
 		</ul>
 	</li>
 </ul>
