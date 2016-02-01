@@ -2,10 +2,38 @@
 layout: default
 title: Project Blog's
 ---
-	<h1>{{ page.title }}</h1>
-	<ul class="posts">
 
-	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
+<h1>{{ page.title }}</h1>
+
+<ul>
+	<li>
+		<h3>Language Learning Center</h3>
+		<ul class="posts">
+		{% for post in site.posts limit:5 %}
+			{% if post.categories contains 'LLC' %}
+				<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  		{% endif %}
+	  	{% endfor %}
+		</ul>
+	</li>
+	<li>
+		<h3>OU SACM Website</h3>
+		<ul class="posts">
+		{% for post in site.posts limit:5 %}
+			{% if post.categories contains 'SACM' %}
+				<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  		{% endif %}
+	  	{% endfor %}
+		</ul>
+	</li>
+	<li>
+		<h3>Language Learning Center</h3>
+		<ul class="posts">
+		{% for post in site.posts limit:5 %}
+			{% if post.categories contains 'LLC' %}
+				<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  		{% endif %}
+	  	{% endfor %}
+		</ul>
+	</li>
+</ul>
