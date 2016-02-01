@@ -2,7 +2,7 @@
 layout: post
 title: Busy Night, Learned a Lot
 date: 2015-12-05
-categories: LLC
+category: LLC
 ---
 
 Last night I woke up at around 2 in the morning in a code sweat.  
