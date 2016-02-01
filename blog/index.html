@@ -10,7 +10,7 @@ title: Project Blogs
 		<h2>Language Learning Center</h2>
 		<ul class="posts">
 			{% for post in site.posts limit:5 %}
-				{% if post.categories contains 'LLC' %}
+				{% if post.category is 'LLC' %}
 					<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 		  		{% endif %}
 		  	{% endfor %}
@@ -20,7 +20,7 @@ title: Project Blogs
 		<h2>OU SACM Website</h2>
 		<ul class="posts">
 			{% for post in site.posts limit:5 %}
-				{% if post.categories contains 'SACM' %}
+				{% if post.category is 'SACM' %}
 					<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 		  		{% endif %}
 		  	{% endfor %}
@@ -30,7 +30,7 @@ title: Project Blogs
 		<h2>Class Projects</h2>
 		<ul class="posts">
 			{% for post in site.posts limit:5 %}
-				{% if post.categories contains 'OU' %}
+				{% if post.category is 'OU' %}
 					<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 		  		{% endif %}
 		  	{% endfor %}
