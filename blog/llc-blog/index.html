@@ -4,7 +4,15 @@ title: Language Learning Center Website
 ---
 
 <p>
-	In fall of 2015 I began work with the <a href="http://llc.ou.edu">Language Learning Center</a> at
+	In Fall 2015 I began work with the <a href="http://llc.ou.edu">Language Learning Center</a> at
 	the University of Oklahoma.  I am in charge of the lab website as well as several other
 	programs and systems.  This blog outlines the work I have done with the LLC.
 </p>
+
+{% raw %}
+{% for post in site.posts %}
+  {% if post.categories contains 'LLC' %}
+	<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+  {% endif %}
+{% endfor %}
+{% endraw %}
