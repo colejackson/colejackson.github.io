@@ -10,7 +10,5 @@ title: Language Learning Center Website
 </p>
 
 {% for post in site.posts %}
-	{% if post.categories contains 'LLC' %}
-		<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-  	{% endif %}
+	<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 {% endfor %}
