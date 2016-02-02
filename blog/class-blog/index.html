@@ -3,3 +3,15 @@
 layout: default
 title: Class Projects Blog
 ---
+
+<h1>{{ page.title }}</h1>
+
+<p>
+  Ad sictum per un anum de sictum.
+</p>
+
+{% for post in site.posts %}
+	{% if post.category == "CLASS" %}
+		<li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	{% endif %}
+{% endfor %}
